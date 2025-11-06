@@ -68,7 +68,7 @@ photozip = 'https://envs.sh/cD_.jpg'
 BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/Final_piece")]])
 keyboard = InlineKeyboardMarkup(
     [
-        [InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+3k-1zcJxINYwNGZl"), InlineKeyboardButton(text="🛠️ Repo", url="https://t.me/Final_piece")],
+        [InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+J7kCukeM3z0zZmU1"), InlineKeyboardButton(text="🛠️ Repo", url="https://t.me/Final_piece")],
     ]
 )
 
