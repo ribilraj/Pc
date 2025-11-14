@@ -1088,12 +1088,21 @@ async def txt_handler(bot: Client, m: Message):
             if "acecwply" in url:
                 cmd = f'yt-dlp -o "{name}.%(ext)s" -f "bestvideo[height<={raw_text2}]+bestaudio" --hls-prefer-ffmpeg --no-keep-video --remux-video mkv --no-warning "{url}"'
 
-            elif "https://cpvod.testbook.com/" in url or "classplusapp.com/drm/" in url:
+            elif (
+                "cpvod.testbook.com" in url or
+                "classplusapp.com/drm" in url or
+                "media-cdn.classplusapp.com/drm" in url or
+                "media-cdn-a.classplusapp.com/drm" in url or
+                "media-cdn-alisg.classplusapp.com/drm" in url
+                ):
+            if "cpvod.testbook.com" in url:
                 url = url.replace("https://cpvod.testbook.com/", "https://media-cdn.classplusapp.com/drm/")
+
                 api = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7290128282"
                 mpd, keys = helper.get_mps_and_keys(api)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
+
 
             elif "classplusapp" in url:
                 signed_api = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7290128282"
@@ -1103,6 +1112,7 @@ async def txt_handler(bot: Client, m: Message):
                     url = data.get("url", url)
                 except:
                     url = response.text.strip()
+
 
             elif "tencdn.classplusapp" in url:
                 headers = {'host':'api.classplusapp.com','x-access-token':cptoken,'accept-language':'EN','api-version':'18','app-version':'1.4.73.2','build-number':'35','connection':'Keep-Alive','content-type':'application/json','device-details':'Xiaomi_Redmi 7_SDK-32','device-id':'c28d3cb16bbdac01','region':'IN','user-agent':'Mobile-Android','webengage-luid':'00000187-6fe4-5d41-a530-26186858be4c','accept-encoding':'gzip'}
@@ -1114,6 +1124,7 @@ async def txt_handler(bot: Client, m: Message):
                 except:
                     url = response.text.strip()
 
+
             elif "videos.classplusapp" in url:
                 headers = {'x-access-token': cptoken}
                 response = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers=headers)
@@ -1122,6 +1133,7 @@ async def txt_handler(bot: Client, m: Message):
                     url = data.get("url", url)
                 except:
                     url = response.text.strip()
+
 
             elif (
                 'media-cdn.classplusapp.com' in url or
@@ -1136,6 +1148,7 @@ async def txt_handler(bot: Client, m: Message):
                     url = data.get("url", url)
                 except:
                     url = response.text.strip()
+
 
 
             if "edge.api.brightcove.com" in url:
@@ -1483,6 +1496,22 @@ async def text_handler(bot: Client, m: Message):
             if "acecwply" in url:
                 cmd = f'yt-dlp -o "{name}.%(ext)s" -f "bestvideo[height<={raw_text2}]+bestaudio" --hls-prefer-ffmpeg --no-keep-video --remux-video mkv --no-warning "{url}"'
 
+            elif (
+                "cpvod.testbook.com" in url or
+                "classplusapp.com/drm" in url or
+                "media-cdn.classplusapp.com/drm" in url or
+                "media-cdn-a.classplusapp.com/drm" in url or
+                "media-cdn-alisg.classplusapp.com/drm" in url
+                ):
+            if "cpvod.testbook.com" in url:
+                url = url.replace("https://cpvod.testbook.com/", "https://media-cdn.classplusapp.com/drm/")
+
+                api = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7290128282"
+                mpd, keys = helper.get_mps_and_keys(api)
+                url = mpd
+                keys_string = " ".join([f"--key {key}" for key in keys])
+
+
             elif "classplusapp" in url:
                 signed_api = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7290128282"
                 response = requests.get(signed_api, timeout=60)
@@ -1491,6 +1520,7 @@ async def text_handler(bot: Client, m: Message):
                     url = data.get("url", url)
                 except:
                     url = response.text.strip()
+
 
             elif "tencdn.classplusapp" in url:
                 headers = {'host':'api.classplusapp.com','x-access-token':cptoken,'accept-language':'EN','api-version':'18','app-version':'1.4.73.2','build-number':'35','connection':'Keep-Alive','content-type':'application/json','device-details':'Xiaomi_Redmi 7_SDK-32','device-id':'c28d3cb16bbdac01','region':'IN','user-agent':'Mobile-Android','webengage-luid':'00000187-6fe4-5d41-a530-26186858be4c','accept-encoding':'gzip'}
@@ -1502,6 +1532,7 @@ async def text_handler(bot: Client, m: Message):
                 except:
                     url = response.text.strip()
 
+
             elif "videos.classplusapp" in url:
                 headers = {'x-access-token': cptoken}
                 response = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers=headers)
@@ -1510,6 +1541,7 @@ async def text_handler(bot: Client, m: Message):
                     url = data.get("url", url)
                 except:
                     url = response.text.strip()
+
 
             elif (
                 'media-cdn.classplusapp.com' in url or
