@@ -1098,30 +1098,30 @@ async def txt_handler(bot: Client, m: Message):
             elif "classplusapp" in url:
                 signed_api = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7290128282"
                 response = requests.get(signed_api, timeout=60)
-            try:
-                data = response.json()
-                url = data.get("url", url)
-            except:
-                url = response.text.strip()
+                try:
+                    data = response.json()
+                    url = data.get("url", url)
+                except:
+                    url = response.text.strip()
 
             elif "tencdn.classplusapp" in url:
                 headers = {'host':'api.classplusapp.com','x-access-token':cptoken,'accept-language':'EN','api-version':'18','app-version':'1.4.73.2','build-number':'35','connection':'Keep-Alive','content-type':'application/json','device-details':'Xiaomi_Redmi 7_SDK-32','device-id':'c28d3cb16bbdac01','region':'IN','user-agent':'Mobile-Android','webengage-luid':'00000187-6fe4-5d41-a530-26186858be4c','accept-encoding':'gzip'}
                 params = {"url": url}
                 response = requests.get('https://api.classplusapp.com/cams/uploader/video/jw-signed-url', headers=headers, params=params)
-            try:
-                data = response.json()
-                url = data.get("url", url)
-            except:
-                url = response.text.strip()
+                try:
+                    data = response.json()
+                    url = data.get("url", url)
+                except:
+                    url = response.text.strip()
 
             elif "videos.classplusapp" in url:
                 headers = {'x-access-token': cptoken}
                 response = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers=headers)
-            try:
-                data = response.json()
-                url = data.get("url", url)
-            except:
-                url = response.text.strip()
+                try:
+                    data = response.json()
+                    url = data.get("url", url)
+                except:
+                    url = response.text.strip()
 
             elif (
                 'media-cdn.classplusapp.com' in url or
@@ -1131,11 +1131,11 @@ async def txt_handler(bot: Client, m: Message):
                 headers = {'host':'api.classplusapp.com','x-access-token':cptoken,'accept-language':'EN','api-version':'18','app-version':'1.4.73.2','build-number':'35','connection':'Keep-Alive','content-type':'application/json','device-details':'Xiaomi_Redmi 7_SDK-32','device-id':'c28d3cb16bbdac01','region':'IN','user-agent':'Mobile-Android','webengage-luid':'00000187-6fe4-5d41-a530-26186858be4c','accept-encoding':'gzip'}
                 params = {"url": url}
                 response = requests.get('https://api.classplusapp.com/cams/uploader/video/jw-signed-url', headers=headers, params=params)
-            try:
-                data = response.json()
-                url = data.get("url", url)
+                try:
+                    data = response.json()
+                    url = data.get("url", url)
                 except:
-                url = response.text.strip()
+                    url = response.text.strip()
 
 
             if "edge.api.brightcove.com" in url:
@@ -1486,30 +1486,30 @@ async def text_handler(bot: Client, m: Message):
             elif "classplusapp" in url:
                 signed_api = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7290128282"
                 response = requests.get(signed_api, timeout=60)
-            try:
-                data = response.json()
-                url = data.get("url", url)
-            except:
-                url = response.text.strip()
+                try:
+                    data = response.json()
+                    url = data.get("url", url)
+                except:
+                    url = response.text.strip()
 
             elif "tencdn.classplusapp" in url:
                 headers = {'host':'api.classplusapp.com','x-access-token':cptoken,'accept-language':'EN','api-version':'18','app-version':'1.4.73.2','build-number':'35','connection':'Keep-Alive','content-type':'application/json','device-details':'Xiaomi_Redmi 7_SDK-32','device-id':'c28d3cb16bbdac01','region':'IN','user-agent':'Mobile-Android','webengage-luid':'00000187-6fe4-5d41-a530-26186858be4c','accept-encoding':'gzip'}
                 params = {"url": url}
                 response = requests.get('https://api.classplusapp.com/cams/uploader/video/jw-signed-url', headers=headers, params=params)
-            try:
-                data = response.json()
-                url = data.get("url", url)
-            except:
-                url = response.text.strip()
+                try:
+                    data = response.json()
+                    url = data.get("url", url)
+                except:
+                    url = response.text.strip()
 
             elif "videos.classplusapp" in url:
                 headers = {'x-access-token': cptoken}
                 response = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers=headers)
-            try:
-                data = response.json()
-                url = data.get("url", url)
-            except:
-                url = response.text.strip()
+                try:
+                    data = response.json()
+                    url = data.get("url", url)
+                except:
+                    url = response.text.strip()
 
             elif (
                 'media-cdn.classplusapp.com' in url or
@@ -1519,11 +1519,11 @@ async def text_handler(bot: Client, m: Message):
                 headers = {'host':'api.classplusapp.com','x-access-token':cptoken,'accept-language':'EN','api-version':'18','app-version':'1.4.73.2','build-number':'35','connection':'Keep-Alive','content-type':'application/json','device-details':'Xiaomi_Redmi 7_SDK-32','device-id':'c28d3cb16bbdac01','region':'IN','user-agent':'Mobile-Android','webengage-luid':'00000187-6fe4-5d41-a530-26186858be4c','accept-encoding':'gzip'}
                 params = {"url": url}
                 response = requests.get('https://api.classplusapp.com/cams/uploader/video/jw-signed-url', headers=headers, params=params)
-            try:
-                data = response.json()
-                url = data.get("url", url)
+                try:
+                    data = response.json()
+                    url = data.get("url", url)
                 except:
-                url = response.text.strip()
+                    url = response.text.strip()
 
             elif "childId" in url and "parentId" in url:
                 url = f"https://pwplayer-38c1ae95b681.herokuapp.com/pw?url={url}&token={raw_text4}"
