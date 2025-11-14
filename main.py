@@ -1094,9 +1094,9 @@ async def txt_handler(bot: Client, m: Message):
                 "media-cdn.classplusapp.com/drm" in url or
                 "media-cdn-a.classplusapp.com/drm" in url or
                 "media-cdn-alisg.classplusapp.com/drm" in url
-                ):
-            if "cpvod.testbook.com" in url:
-                url = url.replace("https://cpvod.testbook.com/", "https://media-cdn.classplusapp.com/drm/")
+            ):
+                if "cpvod.testbook.com" in url:
+                    url = url.replace("https://cpvod.testbook.com/", "https://media-cdn.classplusapp.com/drm/")
 
                 api = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7290128282"
                 mpd, keys = helper.get_mps_and_keys(api)
@@ -1139,7 +1139,7 @@ async def txt_handler(bot: Client, m: Message):
                 'media-cdn.classplusapp.com' in url or
                 'media-cdn-alisg.classplusapp.com' in url or
                 'media-cdn-a.classplusapp.com' in url
-                ):
+            ):
                 headers = {'host':'api.classplusapp.com','x-access-token':cptoken,'accept-language':'EN','api-version':'18','app-version':'1.4.73.2','build-number':'35','connection':'Keep-Alive','content-type':'application/json','device-details':'Xiaomi_Redmi 7_SDK-32','device-id':'c28d3cb16bbdac01','region':'IN','user-agent':'Mobile-Android','webengage-luid':'00000187-6fe4-5d41-a530-26186858be4c','accept-encoding':'gzip'}
                 params = {"url": url}
                 response = requests.get('https://api.classplusapp.com/cams/uploader/video/jw-signed-url', headers=headers, params=params)
@@ -1502,9 +1502,9 @@ async def text_handler(bot: Client, m: Message):
                 "media-cdn.classplusapp.com/drm" in url or
                 "media-cdn-a.classplusapp.com/drm" in url or
                 "media-cdn-alisg.classplusapp.com/drm" in url
-                ):
-            if "cpvod.testbook.com" in url:
-                url = url.replace("https://cpvod.testbook.com/", "https://media-cdn.classplusapp.com/drm/")
+            ):
+                if "cpvod.testbook.com" in url:
+                    url = url.replace("https://cpvod.testbook.com/", "https://media-cdn.classplusapp.com/drm/")
 
                 api = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7290128282"
                 mpd, keys = helper.get_mps_and_keys(api)
@@ -1547,7 +1547,7 @@ async def text_handler(bot: Client, m: Message):
                 'media-cdn.classplusapp.com' in url or
                 'media-cdn-alisg.classplusapp.com' in url or
                 'media-cdn-a.classplusapp.com' in url
-                ):
+            ):
                 headers = {'host':'api.classplusapp.com','x-access-token':cptoken,'accept-language':'EN','api-version':'18','app-version':'1.4.73.2','build-number':'35','connection':'Keep-Alive','content-type':'application/json','device-details':'Xiaomi_Redmi 7_SDK-32','device-id':'c28d3cb16bbdac01','region':'IN','user-agent':'Mobile-Android','webengage-luid':'00000187-6fe4-5d41-a530-26186858be4c','accept-encoding':'gzip'}
                 params = {"url": url}
                 response = requests.get('https://api.classplusapp.com/cams/uploader/video/jw-signed-url', headers=headers, params=params)
